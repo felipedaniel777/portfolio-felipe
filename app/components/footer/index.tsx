@@ -6,5 +6,5 @@ export const Footer = () => {
         <strong className="font-medium">Felipe Daniel</strong>
       </span>
     </footer>
-  );
-};
+  )
+}

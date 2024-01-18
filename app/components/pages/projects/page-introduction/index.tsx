@@ -1,9 +1,9 @@
-'use client';
+'use client' 
 
-import { HiArrowNarrowLeft } from 'react-icons/hi';
-import { Link } from '../../../link';
-import { SectionTitle } from '../../../section-title';
-import { motion } from 'framer-motion';
+import { HiArrowNarrowLeft } from 'react-icons/hi' 
+import { Link } from '../../../link' 
+import { SectionTitle } from '../../../section-title' 
+import { motion } from 'framer-motion' 
 
 export const PageIntroduction = () => {
   return (
@@ -32,5 +32,5 @@ export const PageIntroduction = () => {
         </Link>
       </motion.div>
     </section>
-  );
-};
+  ) 
+} 

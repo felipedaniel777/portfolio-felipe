@@ -1,25 +1,25 @@
-'use client';
-import { Button } from '@/app/components/button';
-import { CMSIcon } from '@/app/components/cms-icon';
-import { TechBadge } from '@/app/components/tech-badge';
-import { techBadgeAnimation } from '@/app/lib/animation';
-import { HomePageInfo } from '@/app/types/page-info';
-import { RichText } from '@graphcms/rich-text-react-renderer';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+'use client' 
+import { Button } from '@/app/components/button' 
+import { CMSIcon } from '@/app/components/cms-icon' 
+import { TechBadge } from '@/app/components/tech-badge' 
+import { techBadgeAnimation } from '@/app/lib/animation' 
+import { HomePageInfo } from '@/app/types/page-info' 
+import { RichText } from '@graphcms/rich-text-react-renderer' 
+import { motion } from 'framer-motion' 
+import Image from 'next/image' 
+import { HiArrowNarrowRight } from 'react-icons/hi' 
 
 type HomeSectionProps = {
-  homeInfo: HomePageInfo;
-};
+  homeInfo: HomePageInfo 
+} 
 
 export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
   const handleContact = () => {
-    const contactSection = document.querySelector('#contact');
+    const contactSection = document.querySelector('#contact') 
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: 'smooth' }) 
     }
-  };
+  } 
   return (
     <section className="w-full lg:h-[755px] flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
       <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
@@ -81,5 +81,5 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  ) 
+} 

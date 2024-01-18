@@ -1,12 +1,12 @@
-import { Project } from '@/app/types/projects';
-import Image from 'next/image';
+import { Project } from '@/app/types/projects' 
+import Image from 'next/image' 
 
 type ProjectCardProps = {
-  project: Project;
-};
+  project: Project 
+} 
 
 export const ProjectsCard = ({ project }: ProjectCardProps) => {
-  const technologies = project.technologies.map((x) => x.name).join(', ');
+  const technologies = project.technologies.map((x) => x.name).join(', ') 
   return (
     <div className="rounded-lg h-[436px] flex flex-col bg-gray-800 overflow-hidden border-2 border-gray-800 hover:border-red-500 transition-all opacity-70 hover:opacity-100 group">
       <div className="w-full h-48 overflow-hidden">
@@ -31,5 +31,5 @@ export const ProjectsCard = ({ project }: ProjectCardProps) => {
         </span>
       </div>
     </div>
-  );
-};
+  ) 
+} 

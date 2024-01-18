@@ -1,12 +1,12 @@
-import { Inter, IBM_Plex_Mono } from 'next/font/google';
-import './globals.css';
-import { ReactNode } from 'react';
-import { Header } from './components/header';
-import { ContactForm } from './components/contact-form';
-import { Footer } from './components/footer';
-import { BackToTop } from './components/back-to-top';
-import { Toaster } from './components/toaster';
-import StarsCanvas from './components/star-background';
+import { Inter, IBM_Plex_Mono } from 'next/font/google' 
+import './globals.css' 
+import { ReactNode } from 'react' 
+import { Header } from './components/header' 
+import { ContactForm } from './components/contact-form' 
+import { Footer } from './components/footer' 
+import { BackToTop } from './components/back-to-top' 
+import { Toaster } from './components/toaster' 
+import StarsCanvas from './components/star-background' 
 
 export const metadata = {
   title: {
@@ -18,18 +18,18 @@ export const metadata = {
       url: '/favicon.png',
     },
   ],
-};
+} 
 
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
-});
+}) 
 
 const plexMono = IBM_Plex_Mono({
   variable: '--font-plex-mono',
   subsets: ['latin'],
   weight: ['400', '500'],
-});
+}) 
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -44,5 +44,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
       </body>
     </html>
-  );
+  ) 
 }
