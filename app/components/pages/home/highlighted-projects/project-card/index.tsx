@@ -1,16 +1,14 @@
-'use client' 
-import { Link } from '@/app/components/link' 
-import { TechBadge } from '@/app/components/tech-badge' 
-import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animation' 
-import { Project } from '@/app/types/projects' 
-import { motion } from 'framer-motion' 
-import Image from 'next/image' 
-import { HiArrowNarrowRight } from 'react-icons/hi' 
-
+'use client'
+import { Link } from '@/app/components/link'
+import { TechBadge } from '@/app/components/tech-badge'
+import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animation'
+import { Project } from '@/app/types/projects'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { HiArrowNarrowRight } from 'react-icons/hi'
 type ProjectCardProps = {
   project: Project 
-} 
-
+}
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <motion.div
@@ -66,5 +64,5 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         </Link>
       </div>
     </motion.div>
-  ) 
-} 
+  )
+}

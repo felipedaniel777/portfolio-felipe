@@ -9,15 +9,12 @@ import axios from 'axios'
 import { toast } from 'react-hot-toast'
 import { motion } from 'framer-motion'
 import { fadeUpAnimation } from '@/app/lib/animation'
-
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
   email: z.string().email(),
   message: z.string().min(1).max(500),
 })
-
 type ContactFormData = z.infer<typeof contactFormSchema>
-
 export const ContactForm = () => {
   const {
     handleSubmit,
@@ -27,7 +24,6 @@ export const ContactForm = () => {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
   })
-
   const onSubmit = async (data: ContactFormData) => {
     try {
       await axios.post('/api/contact', data)
@@ -37,7 +33,6 @@ export const ContactForm = () => {
       alert('Ocorreu um erro ao enviar a mensagem. Tente novamente.')
     }
   }
-
   return (
     <section
       id="contact"
@@ -49,7 +44,6 @@ export const ContactForm = () => {
           subtitle={'contato'}
           className="items-center text-center"
         />
-
         <motion.form
           {...fadeUpAnimation}
           className="mt-12 w-full flex flex-col gap-4"

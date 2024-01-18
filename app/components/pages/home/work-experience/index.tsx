@@ -1,11 +1,9 @@
-import { SectionTitle } from '@/app/components/section-title' 
-import { ExperienceItem } from './experience-item' 
-import { WorkExperience as IWorkExperience } from '@/app/types/work-experience' 
-
+import { SectionTitle } from '@/app/components/section-title'
+import { ExperienceItem } from './experience-item'
+import { WorkExperience as IWorkExperience } from '@/app/types/work-experience'
 type WorkExperienceProps = {
   experiences: IWorkExperience[] 
-} 
-
+}
 export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
   return (
     <section className="py-16 bg-gray-950">
@@ -21,7 +19,6 @@ export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
             conjunto para desenvolver soluções eficazes para a sua empresa.
           </p>
         </div>
-
         <div className="flex flex-col gap-4">
           {experiences?.map((experience) => (
             <ExperienceItem
@@ -32,5 +29,5 @@ export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
         </div>
       </div>
     </section>
-  ) 
-} 
+  )
+}

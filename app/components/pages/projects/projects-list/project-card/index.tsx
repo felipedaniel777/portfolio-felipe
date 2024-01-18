@@ -1,10 +1,8 @@
-import { Project } from '@/app/types/projects' 
-import Image from 'next/image' 
-
+import { Project } from '@/app/types/projects'
+import Image from 'next/image'
 type ProjectCardProps = {
   project: Project 
 } 
-
 export const ProjectsCard = ({ project }: ProjectCardProps) => {
   const technologies = project.technologies.map((x) => x.name).join(', ') 
   return (
@@ -31,5 +29,5 @@ export const ProjectsCard = ({ project }: ProjectCardProps) => {
         </span>
       </div>
     </div>
-  ) 
-} 
+  )
+}

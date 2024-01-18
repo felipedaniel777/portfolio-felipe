@@ -1,7 +1,5 @@
-'use client' 
-
-import { Toaster as ToasterProvider } from 'react-hot-toast' 
-
+'use client'
+import { Toaster as ToasterProvider } from 'react-hot-toast'
 export const Toaster = () => {
   return (
     <ToasterProvider
@@ -25,9 +23,9 @@ export const Toaster = () => {
           iconTheme: {
             primary: '#fff',
             secondary: '#ef4444',
-          },
-        },
+          }
+        }
       }}
     />
-  ) 
-} 
+  )
+}

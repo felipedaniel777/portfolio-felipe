@@ -1,13 +1,11 @@
-'use client' 
-import { SectionTitle } from '@/app/components/section-title' 
-import { KnownTech } from './known-tech' 
-import { KnownTech as IKnownTech } from '@/app/types/projects' 
-import { motion } from 'framer-motion' 
-
+'use client'
+import { SectionTitle } from '@/app/components/section-title'
+import { KnownTech } from './known-tech'
+import { KnownTech as IKnownTech } from '@/app/types/projects'
+import { motion } from 'framer-motion'
 type KnownTechsProps = {
-  techs: IKnownTech[] 
-} 
-
+  techs: IKnownTech[]
+}
 export const KnownTechs = ({ techs }: KnownTechsProps) => {
   return (
     <section className="py-16 bg-gray-950">
@@ -28,5 +26,5 @@ export const KnownTechs = ({ techs }: KnownTechsProps) => {
         </div>
       </div>
     </section>
-  ) 
-} 
+  )
+}

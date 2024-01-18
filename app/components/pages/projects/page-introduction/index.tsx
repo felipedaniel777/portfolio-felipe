@@ -1,10 +1,8 @@
-'use client' 
-
-import { HiArrowNarrowLeft } from 'react-icons/hi' 
-import { Link } from '../../../link' 
-import { SectionTitle } from '../../../section-title' 
-import { motion } from 'framer-motion' 
-
+'use client'
+import { HiArrowNarrowLeft } from 'react-icons/hi'
+import { Link } from '../../../link'
+import { SectionTitle } from '../../../section-title'
+import { motion } from 'framer-motion'
 export const PageIntroduction = () => {
   return (
     <section className="w-full h-[450px] lg:h-[630px] flex flex-col items-center justify-center px-2">
@@ -32,5 +30,5 @@ export const PageIntroduction = () => {
         </Link>
       </motion.div>
     </section>
-  ) 
-} 
+  )
+}

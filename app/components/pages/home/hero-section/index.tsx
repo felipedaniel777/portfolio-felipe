@@ -1,18 +1,16 @@
-'use client' 
-import { Button } from '@/app/components/button' 
-import { CMSIcon } from '@/app/components/cms-icon' 
-import { TechBadge } from '@/app/components/tech-badge' 
-import { techBadgeAnimation } from '@/app/lib/animation' 
-import { HomePageInfo } from '@/app/types/page-info' 
-import { RichText } from '@graphcms/rich-text-react-renderer' 
-import { motion } from 'framer-motion' 
-import Image from 'next/image' 
-import { HiArrowNarrowRight } from 'react-icons/hi' 
-
+'use client'
+import { Button } from '@/app/components/button'
+import { CMSIcon } from '@/app/components/cms-icon'
+import { TechBadge } from '@/app/components/tech-badge'
+import { techBadgeAnimation } from '@/app/lib/animation'
+import { HomePageInfo } from '@/app/types/page-info'
+import { RichText } from '@graphcms/rich-text-react-renderer'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { HiArrowNarrowRight } from 'react-icons/hi'
 type HomeSectionProps = {
   homeInfo: HomePageInfo 
 } 
-
 export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
   const handleContact = () => {
     const contactSection = document.querySelector('#contact') 
@@ -81,5 +79,5 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
         </motion.div>
       </div>
     </section>
-  ) 
-} 
+  )
+}

@@ -1,9 +1,7 @@
 import { cn } from '@/app/lib/utils'
-
 type HorizontalDividerProps = {
   className?: string
 }
-
 export const HorizontalDivider = ({ className }: HorizontalDividerProps) => {
   return (
     <div

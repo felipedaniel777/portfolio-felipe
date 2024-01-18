@@ -1,19 +1,17 @@
-'use client' 
-import { Button } from '@/app/components/button' 
-import { SectionTitle } from '@/app/components/section-title' 
-import { TechBadge } from '@/app/components/tech-badge' 
-import { TbBrandGithub } from 'react-icons/tb' 
-import { Link } from '@/app/components/link' 
-import { HiArrowNarrowLeft } from 'react-icons/hi' 
-import { Project } from '@/app/types/projects' 
-import { RichText } from '@/app/components/rich-text' 
-import { motion } from 'framer-motion' 
-import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animation' 
-
+'use client'
+import { Button } from '@/app/components/button'
+import { SectionTitle } from '@/app/components/section-title'
+import { TechBadge } from '@/app/components/tech-badge'
+import { TbBrandGithub } from 'react-icons/tb'
+import { Link } from '@/app/components/link'
+import { HiArrowNarrowLeft } from 'react-icons/hi'
+import { Project } from '@/app/types/projects'
+import { RichText } from '@/app/components/rich-text'
+import { motion } from 'framer-motion'
+import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animation'
 type ProjectDetailsProps = {
   project: Project 
-} 
-
+}
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   return (
     <section className="w-full sm:min-h-[750px] flex flex-col items-center justify-end relative pb-10 sm:pb-24 py-24 px-6 overflow-hidden">
@@ -26,7 +24,6 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           background: `url(/images/hero-bg.png) no-repeat center/cover, url(${project.pageThumbnail.url}) no-repeat center/cover`,
         }}
       ></motion.div>
-
       <SectionTitle
         title={project.title}
         subtitle={'projetos'}
@@ -71,5 +68,5 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         Voltar para projetos
       </Link>
     </section>
-  ) 
-} 
+  )
+}

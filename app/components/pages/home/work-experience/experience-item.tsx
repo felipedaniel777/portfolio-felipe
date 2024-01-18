@@ -1,17 +1,15 @@
-'use client' 
-import { RichText } from '@/app/components/rich-text' 
-import { TechBadge } from '@/app/components/tech-badge' 
-import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animation' 
-import { WorkExperience } from '@/app/types/work-experience' 
-import { differenceInMonths, differenceInYears, format } from 'date-fns' 
-import ptBR from 'date-fns/locale/pt-BR' 
-import { motion } from 'framer-motion' 
-import Image from 'next/image' 
-
+'use client'
+import { RichText } from '@/app/components/rich-text'
+import { TechBadge } from '@/app/components/tech-badge'
+import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animation'
+import { WorkExperience } from '@/app/types/work-experience'
+import { differenceInMonths, differenceInYears, format } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 type ExperienceItemProps = {
-  experience: WorkExperience 
-} 
-
+  experience: WorkExperience
+}
 export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
   const {
     endDate,
@@ -22,19 +20,15 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
     role,
     technologies,
   } = experience 
-
-  const startDate = new Date(experience.startDate) 
-  const formattedStartDate = format(startDate, 'MMM yyyy', { locale: ptBR }) 
+  const startDate = new Date(experience.startDate)
+  const formattedStartDate = format(startDate, 'MMM yyyy', { locale: ptBR })
   const formattedEndDate = endDate
     ? format(new Date(endDate), 'MMM yyyy', { locale: ptBR })
-    : 'o momento' 
-
-  const end = endDate ? new Date(endDate) : new Date() 
-
-  const months = differenceInMonths(end, startDate) 
-  const years = differenceInYears(end, startDate) 
-  const monthsRemaining = months % 12 
-
+    : 'o momento'
+  const end = endDate ? new Date(endDate) : new Date()
+  const months = differenceInMonths(end, startDate)
+  const years = differenceInYears(end, startDate)
+  const monthsRemaining = months % 12
   const formattedDuration =
     years > 0
       ? `${years} ano${years > 1 ? 's' : ''}${
@@ -43,7 +37,6 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
             : ''
         }`
       : `${months} mes${months > 1 ? 'es' : ''}` 
-
   return (
     <motion.div
       {...fadeUpAnimation}
@@ -62,7 +55,6 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
         </div>
         <div className="h-full w-[1px] bg-gray-800"></div>
       </div>
-
       <div>
         <div className="flex flex-col gap-2 text-sm sm:text-base">
           <a
@@ -95,5 +87,5 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
         </div>
       </div>
     </motion.div>
-  ) 
-} 
+  )
+}

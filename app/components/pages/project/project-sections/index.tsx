@@ -1,13 +1,11 @@
-'use client' 
-import { fadeUpAnimation } from '@/app/lib/animation' 
-import { ProjectSection } from '@/app/types/projects' 
-import { motion } from 'framer-motion' 
-import Image from 'next/image' 
-
+'use client'
+import { fadeUpAnimation } from '@/app/lib/animation'
+import { ProjectSection } from '@/app/types/projects'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 type ProjectSectionsProps = {
-  sections: ProjectSection[] 
+  sections: ProjectSection[]
 } 
-
 export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
   return (
     <section className="bg-gray-950 py-12 md:py-32">
@@ -34,5 +32,5 @@ export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
         ))}
       </div>
     </section>
-  ) 
-} 
+  )
+}

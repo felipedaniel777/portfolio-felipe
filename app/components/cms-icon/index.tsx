@@ -1,7 +1,6 @@
 type CMSIconProps = {
   icon: string
 }
-
 export const CMSIcon = ({ icon }: CMSIconProps) => {
   return (
     <div

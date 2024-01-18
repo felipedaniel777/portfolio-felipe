@@ -1,14 +1,12 @@
-'use client' 
-import Link from 'next/link' 
-import { ProjectsCard } from './project-card' 
-import { Project } from '@/app/types/projects' 
-import { motion } from 'framer-motion' 
-import { fadeUpAnimation } from '@/app/lib/animation' 
-
+'use client'
+import Link from 'next/link'
+import { ProjectsCard } from './project-card'
+import { Project } from '@/app/types/projects'
+import { motion } from 'framer-motion'
+import { fadeUpAnimation } from '@/app/lib/animation'
 type ProjectsListProps = {
   projects: Project[] 
-} 
-
+}
 export const ProjectsList = ({ projects }: ProjectsListProps) => {
   return (
     <section className="py-32 bg-gray-950">
@@ -26,5 +24,5 @@ export const ProjectsList = ({ projects }: ProjectsListProps) => {
         ))}
       </div>
     </section>
-  ) 
-} 
+  )
+}

@@ -1,14 +1,12 @@
-import { HorizontalDivider } from '@/app/components/divider/horizontal' 
-import { SectionTitle } from '@/app/components/section-title' 
-import { ProjectCard } from './project-card' 
-import { Link } from '@/app/components/link' 
-import { HiArrowNarrowRight } from 'react-icons/hi' 
-import { Project } from '@/app/types/projects' 
-
+import { HorizontalDivider } from '@/app/components/divider/horizontal'
+import { SectionTitle } from '@/app/components/section-title'
+import { ProjectCard } from './project-card'
+import { Link } from '@/app/components/link'
+import { HiArrowNarrowRight } from 'react-icons/hi'
+import { Project } from '@/app/types/projects'
 type HighlightedProjectsProps = {
   projects: Project[] 
-} 
-
+}
 export const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
   return (
     <section className="py-16 bg-gray-950">
@@ -32,5 +30,5 @@ export const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
         </div>
       </div>
     </section>
-  ) 
-} 
+  )
+}
