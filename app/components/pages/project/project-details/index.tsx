@@ -3,7 +3,7 @@ import { Button } from "@/app/components/button"
 import { SectionTitle } from "@/app/components/section-title"
 import { TechBadge } from "@/app/components/tech-badge"
 import { TbBrandGithub } from "react-icons/tb"
-import { CiGlobe } from "react-icons/ci";
+import { FiGlobe } from "react-icons/Fi"
 import { Link } from "@/app/components/link"
 import { HiArrowNarrowLeft } from "react-icons/hi"
 import { Project } from "@/app/types/projects"
@@ -57,7 +57,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                 {project?.liveProjectUrl && (
                     <a href={project.liveProjectUrl} target="_blank">
                         <Button className="min-w-[180px]">
-                            <CiGlobe size={20} />
+                            <FiGlobe size={20} />
                             Projeto online
                         </Button>
                     </a>
